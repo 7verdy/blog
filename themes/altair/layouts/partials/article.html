@@ -1,14 +1,17 @@
 <article>
-    <header>
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <p class="meta">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-            {{ if .Params.author }}
+    <div class="top-border"></div>
+    <div class="preview">
+        <header class="d-flex align-items-baseline justify-content-between gap-2">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <span class="meta">
+                <time datetime="{{ .Date.Format " 2006-01-02" }}"><i>{{ .Date.Format "January 2, 2006" }}</i></time>
+                {{ if .Params.author }}
                 by {{ .Params.author }}
-            {{ end }}
-        </p>
-    </header>
-    <section>
-        {{ .Summary }}
-    </section>
+                {{ end }}
+            </span>
+        </header>
+        <section class="summary">
+            {{ .Summary }}
+        </section>
+    </div>
 </article>
