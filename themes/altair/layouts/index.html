@@ -1,4 +1,7 @@
 {{ define "main" }}
     <section class="article-list">
+        {{ range .Paginator.Pages }}
+            {{ partial "article.html" . }}
+        {{ end }}
     </section>
 {{ end }}
