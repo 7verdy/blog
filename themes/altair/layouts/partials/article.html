@@ -5,9 +5,6 @@
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <span class="meta">
                 <time datetime="{{ .Date.Format " 2006-01-02" }}"><i>{{ .Date.Format "January 2, 2006" }}</i></time>
-                {{ if .Params.author }}
-                by {{ .Params.author }}
-                {{ end }}
             </span>
         </header>
         <section class="summary">
