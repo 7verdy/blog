@@ -30,12 +30,18 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.sidebar {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
 .sidebar h1 {
     color: var(--text-color);
     font-size: 1rem;
     font-weight: 500;
     margin: 10px 0;
 }
+
 .sidebar h2 {
     font-family: 'Karla', sans-serif;
     color: var(--text-color);
@@ -45,16 +51,33 @@ body {
     margin: 10px 0;
 }
 
+.sidebar header {
+    padding-right: 3rem;
+}
+
+.article-list .tag-btn {
+    font-size: 16px;
+    padding: 2px 5px;
+    border-radius: 25px;
+}
+
+.container .articles {
+    flex: 0 0 auto;
+    width: 75%;
+}
+
 .articles article,
 .full-article {
     display: flex;
     flex-direction: column;
     background-color: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    ;
     border-radius: 10px;
     overflow: hidden;
     transition: box-shadow .3s ease;
 }
+
 .articles article:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.08);
 }
@@ -83,6 +106,7 @@ body {
     font-weight: 500;
     margin: 10px 0;
 }
+
 .preview a:hover {
     color: var(--maroon);
     transition: color .3s ease;
@@ -109,9 +133,61 @@ body {
     color: white;
     border-radius: 10px;
 }
+
 .tag-btn:hover {
     background: white;
     color: var(--light-red);
     border: 1px solid var(--light-red);
     transition: background .3s ease;
+}
+
+.avatar-and-links {
+    justify-content: space-between;
+}
+
+[class*="fa-"] {
+    color: #afafaf;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.links svg:hover {
+    filter: brightness(0.5);
+}
+
+.links svg {
+    height: 25px !important;
+    width: 25px !important;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        margin-top: 2rem !important;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+    .sidebar header {
+        margin-bottom: 2rem;
+        margin-inline: 2rem;
+        padding: 0;
+    }
+
+    .container .articles {
+        width: 100%;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .preview .summary {
+        margin-top: 2rem;
+    }
+
 }

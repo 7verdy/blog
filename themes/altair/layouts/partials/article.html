@@ -7,6 +7,11 @@
                 <time datetime="{{ .Date.Format " 2006-01-02" }}"><i>{{ .Date.Format "January 2, 2006" }}</i></time>
             </span>
         </header>
+        <div class="tags">
+                {{ range .Params.tags }}
+                    <a href="/tags/{{ . | urlize }}" class="tag-btn">{{ . }}</a>
+                {{ end }}
+        </div>
         <section class="summary">
             {{ .Summary }}
         </section>
