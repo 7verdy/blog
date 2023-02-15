@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://blog.verdy.dev/'
 languageCode = 'en-us'
 title = 'blog | verdy.dev'
 theme = 'altair'

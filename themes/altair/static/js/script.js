@@ -1,4 +1,5 @@
-if (window.location.pathname === '/' && window.innerWidth < 800) {
+if ((window.location.pathname === '/' ||
+    window.location.pathname.includes('/tags/')) && window.innerWidth < 800) {
     $('.articles .summary').each(function () {
         var text = $(this).text();
         if (text.length > 250) {

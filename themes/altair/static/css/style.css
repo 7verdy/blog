@@ -59,6 +59,7 @@ body {
     font-size: 16px;
     padding: 2px 5px;
     border-radius: 25px;
+    color: white;
 }
 
 .container .articles {
@@ -127,18 +128,33 @@ body {
     color: #afafaf;
 }
 
-.tag-btn {
+.tag-btn,
+.tags .tag-btn {
     background: var(--light-red);
     border: 1px solid var(--light-red);
     color: white;
     border-radius: 10px;
 }
 
-.tag-btn:hover {
+.tag-btn:hover,
+.tags .tag-btn:hover {
+    text-decoration: none;
     background: white;
     color: var(--light-red);
     border: 1px solid var(--light-red);
     transition: background .3s ease;
+}
+
+.tag-name svg {
+    rotate: 270deg;
+    margin-top: 20px;
+    margin-right: 0.5rem;
+}
+.tag-name h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 10px 0;
 }
 
 .avatar-and-links {
